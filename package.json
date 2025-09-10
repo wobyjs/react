@@ -1,7 +1,11 @@
 {
-  "name": "use-react",
+  "name": "usereact",
   "version": "1.0.2",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wongchichong/usereact.git"
+  },
   "scripts": {
     "git": "git add . && git commit -m \"Bump version\" && git push",
     "bump": "pnpm version patch",

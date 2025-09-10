@@ -19,6 +19,10 @@ This project demonstrates how to integrate React, Woby, and Web Components in a 
 - `examples/react-components/` - React component examples
 - `examples/woby-components/` - Woby component examples
 
+## Repository
+
+- **GitHub**: [https://github.com/wongchichong/usereact](https://github.com/wongchichong/usereact)
+
 ## Live Demo
 
 You can try this demo live on CodeSandbox. To deploy:
@@ -38,7 +42,7 @@ The examples showcase:
 ### Installation
 
 ```bash
-npm install your-package-name
+npm install usereact
 ```
 
 ### useReact Hook
@@ -47,7 +51,7 @@ Renders React components within a Woby environment.
 
 ```tsx
 /** @jsxImportSource woby */
-import { useReact } from 'your-package-name';
+import { useReact } from 'usereact';
 import { ReactCounter } from './ReactCounter';
 
 const UseReactExample = () => {
@@ -73,7 +77,7 @@ const UseReactExample = () => {
 Renders Woby components within a React environment.
 
 ```tsx
-import { useWoby } from 'your-package-name';
+import { useWoby } from 'usereact';
 import { WobyCounter } from './WobyCounter';
 
 function App() {
@@ -117,7 +121,7 @@ The [useReact](file://d:\temp\react_woby\src\useReact.ts#L15-L44) hook allows yo
 
 ```tsx
 /** @jsxImportSource woby */
-import { useReact } from './src/useReact';
+import { useReact } from 'usereact';
 import { ReactCounter } from './examples/react-components/ReactCounter';
 
 const UseReactExample = () => {
@@ -144,7 +148,7 @@ const UseReactExample = () => {
 The [useWoby](file://d:\temp\react_woby\src\useWoby.ts#L15-L36) hook allows you to render Woby components within React:
 
 ```tsx
-import { useWoby } from './src/useWoby';
+import { useWoby } from 'usereact';
 import { WobyCounter } from './examples/woby-components/WobyCounter';
 
 function App() {
