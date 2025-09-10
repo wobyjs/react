@@ -1,0 +1,60 @@
+name: Deploy to CodeSandbox
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'pnpm'
+        
+    - name: Install pnpm
+      run: npm install -g pnpm
+      
+    - name: Install dependencies
+      run: pnpm install
+      
+    - name: Build project
+      run: pnpm build
+      
+    - name: Prepare deployment files
+      run: |
+        node scripts/deploy-examples.js
+        echo "Deployment files prepared"
+        
+    - name: Create deployment package
+      run: |
+        # Create a package with only necessary files for deployment
+        mkdir -p deploy
+        cp -r examples deploy/
+        cp -r src deploy/
+        cp package.json tsconfig.json vite.config.mts index.html sandbox.config.json deploy/
+        cd deploy
+        zip -r ../deployment-package.zip .
+        
+    - name: Upload deployment package
+      uses: actions/upload-artifact@v3
+      with:
+        name: deployment-package
+        path: deployment-package.zip
+        
+    - name: Instructions for CodeSandbox deployment
+      run: |
+        echo "=== DEPLOYMENT INSTRUCTIONS ==="
+        echo "1. Download the deployment-package.zip artifact"
+        echo "2. Create a new GitHub repository"
+        echo "3. Upload the files to the repository"
+        echo "4. Import the repository to CodeSandbox at https://codesandbox.io/s/"
+        echo "5. Update README.md with the CodeSandbox URL using:"
+        echo "   node scripts/update-readme-codesandbox.js <your-codesandbox-url>"
