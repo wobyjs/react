@@ -1,6 +1,9 @@
 {
   "name": "@woby/react",
   "version": "1.0.4",
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "repository": {
     "type": "git",
@@ -10,7 +13,7 @@
     "git": "git add . && git commit -m \"Bump version\" && git push",
     "bump": "pnpm version patch",
     "ver": "powershell -Command \"(Get-Content -Raw -Path package.json | ConvertFrom-Json).version | Out-File -Encoding utf8 ../../public/version.txt; (Get-Content -Raw -Path package.json | ConvertFrom-Json).version | Out-File -Encoding utf8 ./build/version.txt\"",
-    "npmjs": "pnpm publish",
+    "npmjs": "pnpm publish --access public",
     "declaration": "tsc --build --force --declaration --emitDeclarationOnly --declarationMap  --verbose",
     "dev": "vite",
     "build": "pnpm build:lib && pnpm build:examples",
