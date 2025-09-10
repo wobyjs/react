@@ -1,10 +1,10 @@
 {
   "name": "use-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "git": "cd ../.. && git add . && git commit -m \"Bump version\" && git push",
+    "git": "git add . && git commit -m \"Bump version\" && git push",
     "bump": "run-p bump:debug bump:nu bump:extension bump:core bump:calendar20000 bump:styles bump:core bump:phone bump:fbase bump:admin bump:bazi bump:setting bump:qmdj bump:clothing bump:zeri bump:iching bump:compass bump:menu bump:calendar bump:bazip bump:app",
     "ver": "powershell -Command \"(Get-Content -Raw -Path package.json | ConvertFrom-Json).version | Out-File -Encoding utf8 ../../public/version.txt; (Get-Content -Raw -Path package.json | ConvertFrom-Json).version | Out-File -Encoding utf8 ./build/version.txt\"",
     "npmjs": "pnpm publish",
