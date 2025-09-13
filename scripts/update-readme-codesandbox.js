@@ -19,7 +19,7 @@ let readmeContent = readFileSync(readmePath, 'utf8');
 if (readmeContent.includes('## Live Demo')) {
     // Update existing section with the actual URL
     readmeContent = readmeContent.replace(
-        /\[Try it live on CodeSandbox\]\(https:\/\/codesandbox\.io\/s\/react-woby-demo-URL_PLACEHOLDER\)/,
+        /\[Try it live on CodeSandbox\]\(https:\/\/codesandbox\.io\/s\/react-@woby/demo - URL_PLACEHOLDER\) /,
         `[Try it live on CodeSandbox](${codesandboxUrl})`
     );
 

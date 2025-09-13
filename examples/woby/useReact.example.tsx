@@ -1,6 +1,6 @@
 /** @jsxImportSource woby */
 import { useReact } from '../../src/useReact'
-import { ReactCounter } from '../react-components/ReactCounter'
+import { ReactCounter } from '../react/ReactCounter'
 
 // Example component showing how to use the useReact hook
 export const UseReactExample = () => {

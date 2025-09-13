@@ -1,5 +1,5 @@
 import r2wc from '@r2wc/react-to-web-component'
-import { ReactCounter } from './react-components/ReactCounter'
+import { ReactCounter } from './react/ReactCounter'
 
 // Convert the React component to a web component
 const ReactCounterWebComponent = r2wc(ReactCounter, {

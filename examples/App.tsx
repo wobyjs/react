@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
-import { ReactCounter } from './react-components/ReactCounter'
-import { WobyCounter } from './woby-components/WobyCounter'
-import { UseReactExample } from './woby-components/useReact.example'
+import { ReactCounter } from './react/ReactCounter'
+import { WobyCounter } from './woby/WobyCounter'
+import { UseReactExample } from './woby/useReact.example'
 import './index.css'
 import { useWoby } from '../src/useWoby'
 
@@ -66,10 +66,10 @@ function App() {
                             alt="React logo"
                         />
                     </a>
-                    <a href="https://github.com/wongchichong/woby" target="_blank">
+                    <a href="https://github.com/wobyjs/woby" target="_blank">
                         <img
                             className="w-[200px] h-[120px]"
-                            src='https://github.com/wongchichong/woby/raw/main/resources/banner/png/banner-light-rounded.png'
+                            src='https://github.com/wobyjs/woby/raw/main/resources/banner/png/banner-light-rounded.png'
                         />
                     </a>
                 </div>

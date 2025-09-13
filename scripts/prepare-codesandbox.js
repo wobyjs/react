@@ -35,7 +35,7 @@ console.log('Created sandbox.config.json');
 
 // Create a simple package.json for CodeSandbox
 const packageJson = {
-    name: "react-woby-demo",
+    name: "react-@woby/demo",
     private: true,
     version: "0.0.0",
     type: "module",

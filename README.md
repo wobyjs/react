@@ -17,11 +17,11 @@ This project demonstrates how to integrate React, Woby, and Web Components in a 
 - `src/useWoby.ts` - Hook for rendering Woby components in React environment
 - `examples/` - Example implementations and demonstrations
 - `examples/react-components/` - React component examples
-- `examples/woby-components/` - Woby component examples
+- `examples/@woby/components/` - Woby component examples
 
 ## Repository
 
-- **GitHub**: [https://github.com/wongchichong/usereact](https://github.com/wongchichong/usereact)
+- **GitHub**: [https://github.com/wobyjs/usereact](https://github.com/wobyjs/usereact)
 
 ## Live Demo
 
@@ -149,7 +149,7 @@ The [useWoby](file://d:\temp\react_woby\src\useWoby.ts#L15-L36) hook allows you 
 
 ```tsx
 import { useWoby } from 'usereact';
-import { WobyCounter } from './examples/woby-components/WobyCounter';
+import { WobyCounter } from './examples/@woby/components/WobyCounter';
 
 function App() {
   // Use the Woby component hook
