@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
         outDir: 'dist',
         lib: {
           entry: resolve(__dirname, 'src/index.ts'),
-          name: 'useReact',
+          name: '@woby/react',
           fileName: 'index',
           formats: ['es', 'cjs']
         },
